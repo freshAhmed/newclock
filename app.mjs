@@ -5,7 +5,7 @@ import glob from 'glob';
 import mongoose from 'mongoose';
 import http from 'http'
 import {Apphandler} from './config/express.mjs'
-import { onListening, onError } from './config/appsupport.mjs';
+import { onListening, onError } from './config/appSupport.mjs';
 // mongoose.connect(config.db);
 // const db = mongoose.connection;
 // db.on('error', () => {
