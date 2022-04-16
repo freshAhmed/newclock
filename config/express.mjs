@@ -4,7 +4,7 @@ import cookieParser from 'cookie-parser';
 import body_parser from "body-parser"
 
 import compress from "compression"
-import { handle404,basicErrorHandler } from './appsupport.mjs';
+import { handle404,basicErrorHandler } from './appSupport.mjs';
 import  {router} from '../app/router.mjs'
 import exphbs from 'express-handlebars'
 
