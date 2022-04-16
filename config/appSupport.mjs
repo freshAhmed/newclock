@@ -12,7 +12,8 @@ export function basicErrorHandler(error,req,res,next){
     res.locals.error=res.app.get('env')=='development'?error:{};
     res.status(error.status|| 500)
     res.render('error',{
-        error:error,
+        error:{},
+        status:error.status,
         title:'error',
         message:error.message
     })
