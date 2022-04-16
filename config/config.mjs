@@ -6,7 +6,7 @@ __dirname=path.dirname(__dirname);
 const rootPath = path.normalize(__dirname + '/..');
 const env = process.env.NODE_ENV || 'development';
 
-export const config = {
+ const config = {
   development: {
     root: rootPath,
     app: {
@@ -35,3 +35,4 @@ export const config = {
   }
 };
 
+export default config[env]

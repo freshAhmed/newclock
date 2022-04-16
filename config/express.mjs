@@ -12,9 +12,9 @@ export const Apphandler= (app, config) => {
   const env = process.env.NODE_ENV || 'development';
   app.locals.ENV = env;
   app.locals.ENV_DEVELOPMENT = env == 'development';
-  const hbs =exphbs.create({defaultLayout:"main",extname:'hbs',layoutsDir:config.development.root+"/app/views/layouts",partialsDir:"views/partials"})
+  const hbs =exphbs.create({defaultLayout:"main",extname:'hbs',layoutsDir:config.root+"/app/views/layouts",partialsDir:"views/partials"})
   app.engine('hbs', hbs.engine);
-  app.set('views', config.development.root + '/app/views');
+  app.set('views', config.root + '/app/views');
   app.set('view engine', 'hbs');
 
   // app.use(favicon(config.root + '/public/img/favicon.ico'));
@@ -26,7 +26,7 @@ export const Apphandler= (app, config) => {
 
   app.use(cookieParser());
   app.use(compress());
-  app.use(express.static(config.development.root + '/public'));
+  app.use(express.static(config.root + '/public'));
   // app.use(methodOverride());
 
   app.use(router)

@@ -1,6 +1,6 @@
 
 import express from 'express';
-import  {config}  from './config/config.mjs';
+import  config  from './config/config.mjs';
 import glob from 'glob';
 import mongoose from 'mongoose';
 import http from 'http'
@@ -21,6 +21,6 @@ server.on('error',onError)
 server.on('listening',()=>{
   onListening(server)
 })
-server.listen(config.development.port, () => {
-  console.log('Express server listening on port ' + config.development.port);
+server.listen(config.port, () => {
+  console.log('Express server listening on port ' + config.port);
 });
